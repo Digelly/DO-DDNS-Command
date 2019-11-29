@@ -1,0 +1,26 @@
+{
+    "name": "digelly/do-ip-updater",
+    "authors": [
+        {
+            "name": "Trekels Vincent",
+            "email": "vincent@digelly.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Console\\": "src"
+        },
+        "classmap": ["src"]
+    },
+    "require": {
+        "php": ">=7.3",
+        "ext-json": "*",
+        "symfony/console": "^4.3",
+        "guzzlehttp/guzzle": "~6.0",
+        "php-di/php-di": "^6.0"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}
