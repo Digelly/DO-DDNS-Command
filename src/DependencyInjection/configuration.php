@@ -28,13 +28,20 @@ return [
     IPResolver::class => DI\create(IPResolver::class)->constructor(DI\get('app.resolvers')),
 
     'app.resolvers' => [
-        DI\create(V4Resolver::class)->constructor(Di\get('app.ip_client')),
-        DI\create(V6Resolver::class)->constructor(DI\get('app.ip_client')),
+        DI\create(V4Resolver::class)->constructor(Di\get('app.ipv4_client')),
+        DI\create(V6Resolver::class)->constructor(DI\get('app.ipv6_client')),
     ],
 
-    'app.ip_client' => DI\factory(static function () {
+    'app.ipv4_client' => DI\factory(static function () {
         return new Client([
-            'base_uri' => 'https://ipinfo.io/ip',
+            'base_uri' => 'http://checkip.dyndns.org',
+            'timeout'  => 2.0,
+        ]);
+    }),
+
+    'app.ipv6_client' => DI\factory(static function () {
+        return new Client([
+            'base_uri' => 'http://checkipv6.dyndns.org',
             'timeout'  => 2.0,
         ]);
     }),
