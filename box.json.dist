@@ -1,6 +1,6 @@
 {
     "main": "src/index.php",
-    "output": "bin/test.phar",
+    "output": "bin/ip-update.phar",
     "directories": ["src"],
     "finder": [
         {
