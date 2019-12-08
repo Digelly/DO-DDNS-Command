@@ -3,7 +3,11 @@ DO IP Updater
 
 Allows the dynamic updating of an 'A' or 'AAAA' record that is managed by Digital Ocean's DNS servers.
 
-## installation
+## Requirements
+
+- PHP 7.3 or higher
+
+## Installation
 
 Download and unzip the phar file.
 
