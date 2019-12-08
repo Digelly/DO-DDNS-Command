@@ -3,13 +3,14 @@ DO IP Updater
 
 Allows the dynamic updating of an 'A' or 'AAAA' record that is managed by Digital Ocean's DNS servers.
 
-
 ## installation
 
-Download the phar file
+Download and unzip the phar file.
 
 ```bash
-
+curl -sL https://github.com/Digelly/DO-DDNS-Command/releases/download/v1.0.0/ip-update.zip > ip-updater.zip
+unzip ip-updater.zip
+rm ip-updater.zip
 ```
 
 ```bash
